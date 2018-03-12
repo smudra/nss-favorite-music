@@ -5,10 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Array Methods: Favorite Music</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class="container-fluid">
+        <h1 class="header">Favorite Music</h1>
+      
+        <div class="row">
+        
+            <!-- Song column -->
+          <div class="col">
+            <h2>Song List</h2>
+            <!-- Song Form -->
+            <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter a song of your choice" aria-label="Type a song" aria-describedby="basic-addon2" id="input-song">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="displaySong()">Add a song</button>
+                </div>
+            </div>
+            <!-- End Song Form -->
+            <ul id="songs-dom"></ul>
+          </div>
+          <!-- End Song column -->
+
+          <!-- Begin Album column -->
+          <div class="col">
+            <h2>Album List</h2>
+
+            <!-- Album List -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter an Album Name" aria-label="Type a Album" aria-describedby="basic-addon2" id="input-album">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="displayAlbum()">Add an Album</button>
+                </div>
+            </div>
+            <!-- End Album Form -->
+            <ul id="albums-dom"></ul>
+          </div>
+          <!-- End Album column -->
+
+          <!-- Artist column -->
+          <div class="col">
+            <h2>Artist List</h2>
+
+            <!-- Artist Form -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter an Artist's Name" aria-label="Type a Artist" aria-describedby="basic-addon2" id="input-artist">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="displayArtist()">Add an Artist</button>
+                </div>
+            </div>
+            <!-- End Artist Form -->
+            <ul id="artists-dom"></ul>
+          </div>
+          <!-- End Artist column -->
+        </div>
+
+        <!-- To arrange output in a certain way -->
+
+        <div class="row">
+        
+                <!-- Song column -->
+              <div class="col">
+                <h2>Songs</h2>
+                <p>Output vertically descending alphabetically.</p>
+                <ul id="songs-descending"></ul>
+              </div>
+              <!-- End Song column -->
     
+              <!-- Begin Album column -->
+              <div class="col">
+                <h2>Albums</h2>
+                <p>Output vertically ascending alphabetically.</p>
+                <!-- Album List -->
+                <ul id="albums-ascending"></ul>
+              </div>
+              <!-- End Album column -->
+    
+              <!-- Artist column -->
+              <div class="col">
+                <h2>Artists</h2>
+                <p>Output vertically exactly as the data was added.</p>
+                <ul id="artists-as-added"></ul>
+              </div>
+              <!-- End Artist column -->
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="arraymethods.js"></script>
 </body>
 </html>
